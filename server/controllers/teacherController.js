@@ -5,6 +5,8 @@ const Session = require("../models/sessionModel");
 
 const getallTeachers = async (req, res) => {
   try {
+    console.log('request reaching here');
+    
     let teacher;
     if (!req.locals) {
       teacher = await Teacher.find({ isTeacher: true }).populate("userId");

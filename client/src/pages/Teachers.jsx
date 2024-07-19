@@ -16,7 +16,7 @@ const Teachers = () => {
 
   const fetchAllDocs = async () => {
     dispatch(setLoading(true));
-    const data = await fetchData(`/teacher/getallteachers`);
+    const data = await fetchData(`/teacher/getallteachers`); 
     setTeachers(data);
     dispatch(setLoading(false));
   };

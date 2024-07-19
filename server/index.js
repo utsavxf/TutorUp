@@ -27,10 +27,10 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/user", userRouter);
-app.use("/api/teacher", teacherRouter);
-app.use("/api/session", sessionRouter);
-app.use("/api/notification", notificationRouter);
+app.use("/user", userRouter);
+app.use("/teacher", teacherRouter);
+app.use("/session", sessionRouter);
+app.use("/notification", notificationRouter);
 
 app.get('/', (req, res) => res.json({ message: 'Welcome to our API' }));
 
